@@ -47,20 +47,12 @@
             <tr>
                 <td></td>
                 <td>
-                    <button type="submit" class="button" value="Eintragen">Submit</button>
-
+                    <button type="submit" class="button" onclick="alert('Wir haben deine Nachricht erhalten');">Submit</button>
                 </td>
             </tr>
             </tbody>
         </table>
 
     </form>
-    <?php
-    if (isset($_POST['submit']) AND $_POST['submit'] == 'Eintragen') {
-        // z.B. Speichern in einer Datenbank oder Textdatei...
-        echo "Wir haben ihre Nachricht erhalten";
-    }else{
 
-    }
-    ?>
 </div>
