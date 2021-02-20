@@ -1,4 +1,11 @@
 <?php include("header.html") ?>
+    <ul class="topnav">
+        <li><img src="assets/nav_holocron.png" alt="bild" height="36" width="40" id="navbar_image"></li>
+        <li><a href="index.php">Preismodellberatung</a></li>
+        <li><a href="modelle_info.php">Übersicht über Preismodelle</a></li>
+        <!-- <li class="right"><a href="#">Logout</a></li> -->
+    </ul>
+    <main>
     <h1>Datenschutzerklärung</h1>
     <p>Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO),
         ist:</p>

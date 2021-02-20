@@ -1,15 +1,21 @@
 <?php include("header.html") ?>
-
-    <div class='impressum'><h1>Impressum</h1>
-        <p>Angaben gemäß § 5 TMG</p>
-        <p>Anton Bechtloff <br>
-            Ringstraße 74<br>
-            64807 Dieburg <br>
-        </p>
-        <p><strong>Vertreten durch: </strong><br>
-            Anton Bechtloff<br>
-        </p>
-        <p><strong>Kontakt:</strong> <br>
+    <ul class="topnav">
+        <li><img src="assets/nav_holocron.png" alt="bild" height="36" width="40" id="navbar_image"></li>
+        <li><a href="index.php">Preismodellberatung</a></li>
+        <li><a href="modelle_info.php">Übersicht über Preismodelle</a></li>
+        <!-- <li class="right"><a href="#">Logout</a></li> -->
+    </ul>
+    <main>
+        <div class='impressum'><h1>Impressum</h1>
+            <p>Angaben gemäß § 5 TMG</p>
+            <p>Anton Bechtloff <br>
+                Ringstraße 74<br>
+                64807 Dieburg <br>
+            </p>
+            <p><strong>Vertreten durch: </strong><br>
+                Anton Bechtloff<br>
+            </p>
+            <p><strong>Kontakt:</strong> <br>
             Telefon: 017634615231-017634615231<br>
             E-Mail: <a href='mailto:mail@anton-bechtloff.de'>mail@anton-bechtloff.de</a></br></p>
         <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>

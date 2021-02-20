@@ -5,7 +5,7 @@ class Netzwerk_gewinnbeteiligung extends Question
 {
     public function calculate($value, &$factors, &$excluded)
     {
-        $excluded["Pro Asset basiert"] = "Ist eh sehr sehr schlecht";
+        $excluded["Pro Asset basiert"] = "Dieses Modell wurde ausgeschlossen, weil der Kunde dich nicht am Gewinn beteiligen möchte";
         //bitte implementieren Frage 21 "Wäre die Mehrzahl der Kunden bereit dich am Gewinn mitzubeteiligen?"
         ////Ist ein KO Kriterium
     }

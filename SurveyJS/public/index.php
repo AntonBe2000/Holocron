@@ -34,8 +34,8 @@
                                 </svg>
                                 <div x-show="tooltips[modell]" x-on:click.away="tooltips[modell] = false" class="tooltip">
                                     <div class="flexbox">
-                                        <div style="width: 300px">Faktor</div>
-                                        <div>Wert</div>
+                                        <div style="width: 300px"><b>Faktor</b></div>
+                                        <div><b>Wert</b></div>
                                     </div>
                                     <template x-for="[factor, factorValue] in Object.entries(factors)">
                                         <div class="flexbox">
@@ -48,14 +48,16 @@
                                                 </div>
                                                 <div class="progress-outer" style="flex: 1;">
                                                     <div class="progress-inner">
-                                                        <div class="progress" :style="`width: ${pricingModels[modell][factor] * 10}%`"></div>
+                                                        <div class="progress"
+                                                             :style="`width: ${pricingModels[modell][factor] * 10}%`"></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </template>
-                                    <div>
-                                        In <span style="color: blue">blauer</span> Farbe kalkulierter Faktor und des andere <span style="color: #4caf50">Preismodelleignung</span>
+                                   <div>
+                                        <span style="color: blue">  &nbsp;&nbsp;&nbsp; ■ kalkulierter Faktor &nbsp;&nbsp;  </span> <span
+                                               style="color: #4caf50">&nbsp;&nbsp;    ■Preismodell Faktor</span>
                                     </div>
                                 </div>
                             </span>
@@ -82,8 +84,8 @@
                                 </svg>
                                 <div x-show="tooltips[modell]" x-on:click.away="tooltips[modell] = false" class="tooltip">
                                     <div class="flexbox">
-                                        <div style="width: 300px">Faktor</div>
-                                        <div>Wert</div>
+                                        <div style="width: 300px"><b>Faktor</b></div>
+                                        <div><b>Wert</b></div>
                                     </div>
                                     <template x-for="[factor, factorValue] in Object.entries(factors)">
                                         <div class="flexbox">
@@ -91,21 +93,25 @@
                                             <div class="display: flex;">
                                                 <div class="progress-outer" style="flex: 1;margin-bottom: 3px;">
                                                     <div class="progress-inner">
-                                                        <div class="progress" :style="`width: ${factorValue.value * 10}%;background: blue`"></div>
+                                                        <div class="progress"
+                                                             :style="`width: ${factorValue.value * 10}%;background: blue`"></div>
                                                     </div>
                                                 </div>
                                                 <div class="progress-outer" style="flex: 1;">
                                                     <div class="progress-inner">
-                                                        <div class="progress" :style="`width: ${pricingModels[modell][factor] * 10}%`"></div>
+                                                        <div class="progress"
+                                                             :style="`width: ${pricingModels[modell][factor] * 10}%`"></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </template>
                                     <div>
-                                        In <span style="color: blue">blauer</span> Farbe kalkulierter Faktor und des andere <span style="color: #4caf50">Preismodelleignung</span>
+                                        <span style="color: blue">  &nbsp;&nbsp;&nbsp; ■ kalkulierter Faktor &nbsp;&nbsp;  </span> <span
+                                                style="color: #4caf50">&nbsp;&nbsp;    ■Preismodell Faktor</span>
                                     </div>
-                                    <div x-text="excluded[modell]" style="width: 100%; text-align: center; color: #000; padding: 10px; background: #eee;">
+                                    <div x-text="excluded[modell]"
+                                         style="width: 100%; text-align: center; color: #000; padding: 10px; background: #eee;">
                                     </div>
                                 </div>
                             </span>

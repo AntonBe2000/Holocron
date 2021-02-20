@@ -19,6 +19,6 @@ class Kunden_welche_art extends Question
                 $factors["Nutzer"][]= 3;
                 break;
         }
-        $excluded["Transaktionsbasiert"] = "Ist noch viel schlechter (fast so schlecht wie du)";
+        $excluded["Transaktionsbasiert"] = "Der Kunde hat dieses Preismodell ausgeschlossen.";
     }
 }
