@@ -3,6 +3,13 @@
     window.questionnaire = <?php echo file_get_contents(__DIR__ . "/questionnaire.json"); ?>;
     window.pricingModels = <?php echo file_get_contents(__DIR__ . "/pricingModels.json"); ?>;
 </script>
+<ul class="topnav">
+    <li><img src="assets/nav_holocron.png" alt="bild" height="36" width="40" id="navbar_image"></li>
+    <li><a class="active" href="index.php">Preismodellberatung</a></li>
+    <li><a href="modelle_info.php">Übersicht über Preismodelle</a></li>
+    <!-- <li class="right"><a href="#">Logout</a></li> -->
+</ul>
+<main>
 
 <div x-data="surveyData()" x-init="init()">
     <div id="surveyElement"></div>
@@ -10,7 +17,7 @@
     <script src="scripts/index.js"></script>
     <div id="surveyResult" x-show="Object.entries(preismodell).length > 0">
         <div class="included">
-            <div>Eingeschlossen (weil gut)</div>
+            <div><b>Empfohlene Modelle</b></div>
             <template x-for="[modell, value] in Object.entries(preismodell)">
                 <div>
                     <template x-if="!Object.keys(excluded).includes(modell)">
@@ -58,7 +65,7 @@
             </template>
         </div>
         <div class="excluded">
-            <div>Ausgeschlossen (weil schlecht)</div>
+            <div><b>Ausgeschlossene Modelle</b></div>
             <template x-for="[modell, value] in Object.entries(preismodell)">
                 <div>
                     <template x-if="Object.keys(excluded).includes(modell)">
@@ -110,5 +117,6 @@
     </div>
 
 </div>
+
 
 <?php include("footer.html"); ?>

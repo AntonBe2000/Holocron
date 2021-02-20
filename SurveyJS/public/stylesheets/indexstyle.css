@@ -51,24 +51,24 @@
 }
 
 .sv_main.sv_default_css .sv_select_wrapper::before {
-    background-color: #ec0016 !important;
+    background-color: #4762c4 !important;
 }
 
 .sv_main.sv_default_css input[type="button"], .sv_default_css button {
-    background-color: #ec0016 !important;
+    background-color: #4762c4 !important;
 }
 
 .sv_main.sv_main .sv-boolean__switch {
-    background-color: #ec0016 !important;
+    background-color: #4762c4 !important;
 }
 
 .sv_main.sv_default_css .sv_q_rating_item.active .sv_q_rating_item_text {
-    background-color: #ec0016 !important;
-    border-color: #ec0016 !important;
+    background-color: #4762c4 !important;
+    border-color: #4762c4 !important;
 }
 
 .sv_main.sv_default_css .sv_q_dropdown_control:focus {
-    border-color: #ec0016 !important;
+    border-color: #4762c4 !important;
 }
 
 main {
