@@ -6,6 +6,7 @@ class Answer implements SplSubject
     private $value;
     private $surveyIdentifier;
     private $time;
+    //frage in var speichern
 
     private $observers;
 
