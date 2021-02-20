@@ -3,7 +3,7 @@
     <h2>Kontaktaufnahme</h2>
 </div>
 <div class="modal-body">
-    <form action="/">
+    <form name="meldung" id="meldung" method="post" action="meldung_auswertung.php" enctype="multipart/form-data">
         <table>
             <tbody>
             <tr>
@@ -11,7 +11,7 @@
                 <td><input type="text" placeholder="Max" name="vorname" id="vorname" required></td>
             </tr>
             <tr>
-                <td><label>Nachname</label></td>
+                <td><label for="nachname">Nachname</label></td>
                 <td><input type="text" placeholder="Mustermann" name="nachname" id="nachname" required></td>
             </tr>
             <tr>
@@ -32,7 +32,7 @@
             <tr>
                 <td></td>
                 <td>
-                    <button type="submit" class="button" href="/">Submit</button>
+                    <button type="submit" class="button" >Submit</button>
                 </td>
             </tr>
             </tbody>
