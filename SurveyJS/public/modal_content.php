@@ -37,6 +37,9 @@
             </tr>
             </tbody>
         </table>
+        <div>
+            <?php include ("meldung_auswertung.php"); ?>
+        </div>
 
     </form>
 </div>

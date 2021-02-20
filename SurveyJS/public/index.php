@@ -129,7 +129,7 @@
         <div id="myModal" class="modal">
             <!-- Modal content -->
             <div class="modal-content">
-                <?php include("modal_content.html"); ?>
+                <?php include("modal_content.php"); ?>
             </div>
         </div>
 
