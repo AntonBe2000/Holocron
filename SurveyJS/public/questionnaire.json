@@ -220,8 +220,8 @@
      "name": "kundensit_bisherig_geeignet",
      "visibleIf": "{kundensit_bisherige_loesung} = 'Andere IT-Lösung' or {kundensit_bisherige_loesung} = 'other'",
      "title": "Wie geeignet war die bisherige Lösung?",
-     "minRateDescription": "Total ungeeignet",
-     "maxRateDescription": "Sehr gut"
+     "minRateDescription": "Sehr ungeeignet",
+     "maxRateDescription": "Sehr geeignet"
     },
     {
      "type": "radiogroup",
@@ -313,8 +313,8 @@
     {
      "type": "multipletext",
      "name": "nutzen_prio_beduerfnisse",
-     "title": "Bitte nenne die wichtigsten Bedürfnisse Deiner Kunden, die durch den Service/das Produkt befriedigt werden sollen.",
-     "description": "Bitte nenne die Bedürfnisse, die Dir spontan einfallen, in absteigender Wichtigkeit",
+     "title": "Bitte nenne die wichtigsten Bedürfnisse Deiner Kunden, die durch den Service befriedigt werden sollen.",
+     "description": "Bitte nenne absteigend die Bedürfnisse",
      "items": [
       {
        "name": "need1",
@@ -346,8 +346,9 @@
      "type": "rating",
      "name": "nutzen_wie_haeufig",
      "title": "Wie häufig muss das wichtigste Bedürfnis befriedigt werden?",
-     "description": "1: Sehr selten | 5: Sehr oft",
-     "enableIf": "{nutzen_wie_haeufig_alt} <> ['unknown']"
+     "enableIf": "{nutzen_wie_haeufig_alt} <> ['unknown']",
+     "minRateDescription": "Sehr selten",
+     "maxRateDescription": "Sehr oft"
     },
     {
      "type": "checkbox",
