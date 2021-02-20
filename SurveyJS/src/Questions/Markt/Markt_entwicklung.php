@@ -3,7 +3,7 @@
 
 class Markt_entwicklung extends Question
 {
-    public function calculate($value, &$factors, $excluded)
+    public function calculate($value, &$factors, &$excluded)
     {
         switch ($value) {
             case "Hohes Wachstum":

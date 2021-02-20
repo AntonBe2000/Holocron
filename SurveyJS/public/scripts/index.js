@@ -2,6 +2,7 @@ function surveyData() {
     return {
         questionnaire: window.questionnaire,
         pricingModels: window.pricingModels,
+        excluded: {},
         preismodell: {},
         factors: {},
         tooltips: {},
@@ -13,6 +14,7 @@ function surveyData() {
                 .then(json => {
                     this.preismodell = json.preismodell;
                     this.factors = json.factors;
+                    this.excluded = json.excluded;
                 })
         },
         init: function () {
@@ -22,8 +24,22 @@ function surveyData() {
 
             window.survey = new Survey.Model(json);
             survey.onComplete.add(result => {
+
                 this.saveAnswers(result);
             });
+
+            survey.onValueChanged.add((sender, options) => {
+                if(options.question.isReadOnly) {
+                    return;
+                }
+                var questions = sender.getAllQuestions();
+                questions.forEach(function(question) {
+                    if(question.isReadOnly) {
+                        question.clearValue();
+                    }
+                })
+            })
+
 
             $("#surveyElement").Survey({
                 model: survey

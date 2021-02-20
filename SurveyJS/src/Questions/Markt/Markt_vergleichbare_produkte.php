@@ -3,7 +3,7 @@
 
 class Markt_vergleichbare_produkte extends Question
 {
-    public function calculate($value, &$factors, $excluded)
+    public function calculate($value, &$factors, &$excluded)
     {
         switch ($value) {
             case "Ja":

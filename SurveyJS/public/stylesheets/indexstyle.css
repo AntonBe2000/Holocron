@@ -2,13 +2,17 @@
     display: flex;
 }
 
-.preismodell > * {
+.preismodell > *:not(span) {
     flex: 1;
 }
 
 .progress {
     background: #4caf50;
     height: 100%;
+}
+
+.progress.big {
+    height: 50%;
 }
 
 .flexbox {
@@ -18,13 +22,13 @@
 .progress-outer {
     width: 100px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-content: center;
     align-items: center;
 }
 
 .progress-inner {
-    height: 2px;
+    height: 3px;
     width: 100%;
     background: #ddd;
 }
@@ -37,11 +41,43 @@
 
 .tooltip {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 40px;
+    right: 0;
     padding: 20px;
     z-index: 100;
     background: #fff;
     border: 1px solid #ccc;
     margin-left: 40px;
+}
+
+.sv_main.sv_default_css .sv_select_wrapper::before {
+    background-color: #ec0016 !important;
+}
+
+.sv_main.sv_default_css input[type="button"], .sv_default_css button {
+    background-color: #ec0016 !important;
+}
+
+.sv_main.sv_main .sv-boolean__switch {
+    background-color: #ec0016 !important;
+}
+
+.sv_main.sv_default_css .sv_q_rating_item.active .sv_q_rating_item_text {
+    background-color: #ec0016 !important;
+    border-color: #ec0016 !important;
+}
+
+.sv_main.sv_default_css .sv_q_dropdown_control:focus {
+    border-color: #ec0016 !important;
+}
+
+main {
+    margin-bottom: 56px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 56px;
+    width: 100%;
 }

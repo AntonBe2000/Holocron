@@ -3,7 +3,7 @@
 
 class Kunden_welche_art extends Question
 {
-    public function calculate($value, &$factors, $excluded)
+    public function calculate($value, &$factors, &$excluded)
     {
         switch ($value) {
             case "Endkunden außerhalb Konzern":
@@ -19,6 +19,6 @@ class Kunden_welche_art extends Question
                 $factors["Nutzer"][]= 3;
                 break;
         }
-        $excluded[] = "Transaktionsbasiert";
+        $excluded["Transaktionsbasiert"] = "Ist noch viel schlechter (fast so schlecht wie du)";
     }
 }

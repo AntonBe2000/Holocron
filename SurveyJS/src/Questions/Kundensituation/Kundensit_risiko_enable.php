@@ -5,7 +5,7 @@ class Kundensit_risiko_enable extends Question
 {
 
 
-    public function calculate($value, &$factors, $excluded)
+    public function calculate($value, &$factors, &$excluded)
     {
         // TODO: Implement calculate() method.
 
