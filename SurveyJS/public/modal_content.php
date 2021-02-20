@@ -42,12 +42,12 @@
             </tr>
             <tr>
                 <td><label for="email">E-Mail Adresse</label></td>
-                <td><input type="email" placeholder="Email" name="email" id="email" value="Eintragen" required></td>
+                <td><input type="email" placeholder="Email" name="email" id="email" required></td>
             </tr>
             <tr>
                 <td></td>
                 <td>
-                    <button type="submit" class="button">Submit</button>
+                    <button type="submit" class="button" value="Eintragen">Submit</button>
 
                 </td>
             </tr>
@@ -60,7 +60,7 @@
         // z.B. Speichern in einer Datenbank oder Textdatei...
         echo "Wir haben ihre Nachricht erhalten";
     }else{
-        
+
     }
     ?>
 </div>
