@@ -17,6 +17,7 @@
     $headers .= "Content-Type: text/plain;charset=utf-8";
     //Mailfunktion aufrufen
     mail($email, $betreff, $nachricht, $headers);
+    echo '<div><br>Die E-Mail wurde abgesendet.</div>';
 ?>
 " enctype="multipart/form-data">
         <table>
@@ -52,11 +53,6 @@
             </tr>
             </tbody>
         </table>
-        <div>
-            <?php
-            require_once __DIR__ . "/meldung_auswertung.php";
-            ?>
-        </div>
 
     </form>
 </div>
