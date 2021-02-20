@@ -38,7 +38,8 @@
             </tbody>
         </table>
         <div>
-            <?php include ("meldung_auswertung.php"); ?>
+            <?php
+            require_once __DIR__ . "/meldung_auswertung.php";?>
         </div>
 
     </form>
