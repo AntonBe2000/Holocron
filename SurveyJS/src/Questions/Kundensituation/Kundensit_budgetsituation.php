@@ -1,7 +1,7 @@
 <?php
 
 
-class Kundensit_budgetsituation extends QuestionWithUnknown
+class Kundensit_budgetsituation extends Question
 {
 
     public function calculate($value, &$factors, &$excluded)

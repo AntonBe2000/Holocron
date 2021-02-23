@@ -1,7 +1,7 @@
 <?php
 
 
-class Technik_hohe_fixkosten extends QuestionWithUnknown
+class Technik_hohe_fixkosten extends Question
 {
 
 

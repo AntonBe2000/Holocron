@@ -1,7 +1,7 @@
 <?php
 
 
-class Nutzen_wie_haeufig extends QuestionWithUnknown
+class Nutzen_wie_haeufig extends Question
 {
 
 

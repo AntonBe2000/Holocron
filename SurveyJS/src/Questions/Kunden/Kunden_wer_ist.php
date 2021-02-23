@@ -1,7 +1,7 @@
 <?php
 
 
-class Kunden_wer_ist
+class Kunden_wer_ist extends Question
 {
     public function calculate($value, &$factors, &$excluded)
     {

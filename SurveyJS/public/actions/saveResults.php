@@ -2,8 +2,6 @@
 
 require_once __DIR__ . "/../../configurations/config.php";
 require_once __DIR__ . "/../../src/Questions/Question.php";
-require_once __DIR__ . "/../../src/Questions/QuestionDocu.php";
-require_once __DIR__ . "/../../src/Questions/QuestionWithUnknown.php";
 require_once __DIR__ . "/../../src/FactorObserver.php";
 require_once __DIR__ . "/../../src/Preismodell.php";
 require_once __DIR__ . "/../../src/Answer.php";

@@ -1,7 +1,7 @@
 <?php
 
 
-class Kundensit_planungssicherheit extends QuestionWithUnknown
+class Kundensit_planungssicherheit extends Question
 {
 
     public function calculate($value, &$factors, &$excluded)
