@@ -1,9 +1,9 @@
 <div class="modal-header">
-    <span class="close">&times;</span>
+    <span class="close">x</span>
     <h2>Kontaktaufnahme</h2>
 </div>
 <div class="modal-body">
-    <form name="meldung" id="meldung" method="post" action="
+    <form name="kontaktMeldung" id="kontaktMeldung" method="post" action="
 <?php
     //Parameter der Meldung abfragen
     $vorname = $_POST["vorname"]; //Vorname
