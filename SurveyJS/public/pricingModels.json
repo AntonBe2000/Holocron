@@ -1,7 +1,8 @@
 {
   "Time and Material": {
     "Nutzer": 10,
-    "Risiko": 0,
+    "Risiko Kunde": 0,
+    "Risiko Systel": 0,
     "Preisbereitschaft": 0,
     "Anzahl Nutzergruppen": 0,
     "Budgetsituation Kunde": 10,
@@ -14,7 +15,8 @@
   },
   "Transaktionsbasiert": {
     "Nutzer": 5,
-    "Risiko": 10,
+    "Risiko Kunde": 0,
+    "Risiko Systel": 10,
     "Preisbereitschaft": 2,
     "Anzahl Nutzergruppen": 5,
     "Budgetsituation Kunde": 10,
@@ -27,7 +29,8 @@
   },
   "Inhaltsbasiert": {
     "Nutzer": 3,
-    "Risiko": 0,
+    "Risiko Kunde": 0,
+    "Risiko Systel": 0,
     "Preisbereitschaft": 10,
     "Anzahl Nutzergruppen": 5,
     "Budgetsituation Kunde": 3,
@@ -40,7 +43,8 @@
   },
   "Volumenbasiert": {
     "Nutzer": 4,
-    "Risiko": 5,
+    "Risiko Kunde": 0,
+    "Risiko Systel": 5,
     "Preisbereitschaft": 3,
     "Anzahl Nutzergruppen": 5,
     "Budgetsituation Kunde": 3,
@@ -53,7 +57,8 @@
   },
   "Nutzungspauschale": {
     "Nutzer": 5,
-    "Risiko": 7,
+    "Risiko Kunde": 0,
+    "Risiko Systel": 7,
     "Preisbereitschaft": 5,
     "Anzahl Nutzergruppen": 0,
     "Budgetsituation Kunde": 5,
@@ -66,7 +71,8 @@
   },
   "Pro Asset basiert": {
     "Nutzer": 5,
-    "Risiko": 7,
+    "Risiko Kunde": 0,
+    "Risiko Systel": 7,
     "Preisbereitschaft": 8,
     "Anzahl Nutzergruppen": 0,
     "Budgetsituation Kunde": 5,
