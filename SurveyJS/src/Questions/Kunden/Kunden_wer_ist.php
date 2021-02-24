@@ -19,6 +19,7 @@ class Kunden_wer_ist extends Question
             $factors["Preisbereitschaft"][] = 5;
             $factors["Budgetsituation Kunde"][] = 5;
             $factors["Nutzungsabhängig"][] = 8;
+            $excluded["Transaktionsbasiert"] = "DB Cargo hat dieses Preismodell in der Vergangenheit nicht akzeptiert.";
             break;
         case "DB Regio":
             $factors["Nutzer"][] = 5;
