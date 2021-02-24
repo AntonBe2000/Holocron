@@ -4,7 +4,8 @@ class FactorObserver implements SplObserver
 {
     private $factors = [
         "Nutzer" => ["values" => [], "multiplier" => 1],
-        "Risiko" => ["values" => [], "multiplier" => 1],
+        "Risiko Kunde" => ["values" => [], "multiplier" => 1],
+        "Risiko Systel" => ["values" => [], "multiplier" => 1],
         "Preisbereitschaft" => ["values" => [], "multiplier" => 1],
         "Anzahl Nutzergruppen" => ["values" => [], "multiplier" => 1],
         "Budgetsituation Kunde" => ["values" => [], "multiplier" => 1],
