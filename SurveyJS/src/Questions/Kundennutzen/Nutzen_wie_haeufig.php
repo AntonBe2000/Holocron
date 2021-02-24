@@ -3,8 +3,6 @@
 
 class Nutzen_wie_haeufig extends Question
 {
-
-
     public function calculate($value, &$factors, &$excluded)
     {
         // TODO: Implement calculate() method.
