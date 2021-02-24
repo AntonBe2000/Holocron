@@ -14,7 +14,7 @@
     $headers .= "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-Type: text/plain;charset=utf-8";
     //Mailfunktion aufrufen
-    mail("Anton.Bechtloff@deutschebahn.com", $betreff, $nachricht, $headers);
+    mail("mail@anton-bechtloff.de", $betreff, $nachricht, $headers);
     ?>
     " enctype="multipart/form-data">
         <table>
