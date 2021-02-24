@@ -5,6 +5,31 @@ class Kundensit_bisherig_geeignet extends Question
 {
     public function calculate($value, &$factors, &$excluded)
     {
-       // $factors["Preisbereitschaft"] = ($value / self::QUESTION_SCALE) * self::FACTOR_SCALE;
+        switch ($value)
+        {
+            case "1":
+                $factors["Risiko Kunde"][] = -5;
+                $factors["Preisbereitschaft"][] = 5;
+                break;
+            case "2":
+                $factors["Risiko Kunde"][] = -3;
+                $factors["Risiko Systel"][] = 3;
+                $factors["Preisbereitschaft"][] = 2;
+                break;
+            case "3":
+                $factors["Risiko Kunde"][] = -2;
+                $factors["Risiko Systel"][] = 5;
+                $factors["Preisbereitschaft"][] = -2;
+                break;
+            case "4":
+                $factors["Risiko Kunde"][] = -1;
+                $factors["Risiko Systel"][] = 7;
+                $factors["Preisbereitschaft"][] = -6;
+                break;
+            case "5":
+                $factors["Risiko Systel"][] = 10;
+                $factors["Preisbereitschaft"][] = -10;
+                break;
+        }
     }
 }
