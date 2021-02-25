@@ -525,10 +525,14 @@
         "choices": [
          {
           "value": "Eigenständig",
-          "text": "Eigenständig"
+          "text": "Komplett eigenständig durch DB Systel finanziert"
          },
          {
-          "value": "In Kooperation mit dem Kunden im Projekt",
+          "value": "Anfinanziert",
+          "text": "Durch den Kunden anfinanziert"
+         },
+         {
+          "value": "Kooperation",
           "text": "In Kooperation mit dem Kunden im Projekt"
          }
         ],

@@ -7,10 +7,18 @@ class Netzwerk_kunden_kooperation extends Question
     {
         switch ($value) {
             case "Eigenständig":
-                $factors["Skalierbarkeit"][] = 2;
+                $factors["Risiko Kunde"][] = 10;
+                $factors["Risiko Systel"][] = 10;
+                $factors["Preisbereitschaft"][] = 0;
                 break;
-            case "In Kooperation mit dem Kunden im Projekt":
-                $factors["Skalierbarkeit"][] = 8;
+            case "Anfinanziert":
+                $factors["Risiko Systel"][] = 0;
+                $factors["Preisbereitschaft"][] = 10;
+                break;
+            case "Kooperation":
+                $factors["Risiko Kunde"][] = 5;
+                $factors["Risiko Systel"][] = 5;
+                $factors["Preisbereitschaft"][] = 5;
                 break;
         }
     }
