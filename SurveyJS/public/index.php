@@ -120,6 +120,7 @@
                 </div>
             </template>
         </div>
+        <!-- <?php var_dump(get_defined_vars()); ?> -->
         <!-- Modals -->
         <?php include("kontakt_modal.php"); ?>
     </div>
