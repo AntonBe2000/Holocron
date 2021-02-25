@@ -120,9 +120,9 @@
                 </div>
             </template>
         </div>
-        <!-- <?php var_dump(get_defined_vars()); ?> -->
         <!-- Modals -->
         <?php include("kontakt_modal.php"); ?>
+        <p><a href="factorglossary.php" target="_blank">Hier</a> kannst du nachlesen wofür die einzelnen Faktoren stehen.</p>
     </div>
     <?php include("feedback_modal.php"); ?>
 </div>
