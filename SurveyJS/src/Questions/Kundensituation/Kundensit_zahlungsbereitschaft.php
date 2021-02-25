@@ -7,10 +7,14 @@ class Kundensit_zahlungsbereitschaft extends Question
     {
         switch ($value) {
             case "Ja":
-                $factors["Budgetsituation"][] = 8;
+                $factors["Preisbereitschaft"][] = 10;
+                $factors["Budgetsituation Kunde"][] = 5;
+                $factors["Nutzungsabhängig"][] = 10;
                 break;
             case "Nein":
-                $factors["Budgetsituation"][] = 2;
+                $factors["Preisbereitschaft"][] = 1;
+                $factors["Budgetsituation Kunde"][] = 3;
+                $factors["Nutzungsabhängig"][] = 0;
                 break;
         }
     }
