@@ -8,8 +8,8 @@ class Kunden_wer_ist extends Question
      switch ($value) 
      {
         case "DB Systel":
-            $factors["Nutzer"][] = -5;
-            $factors["Risiko Systel"][] = -10;
+            $factors["Nutzer"][] = 0;
+            $factors["Risiko Systel"][] = 0;
             $factors["Preisbereitschaft"][] = 9;
             $factors["Budgetsituation Kunde"][] = 9;
             $factors["Nutzungsabhängig"][] = 10;
@@ -36,7 +36,7 @@ class Kunden_wer_ist extends Question
             $factors["Nutzungsabhängig"][] = 5;
             break;
         case "DB Netz":
-            $factors["Risiko Systel"][] = -10;
+            $factors["Risiko Systel"][] = 10;
             $factors["Preisbereitschaft"][] = 10;
             $factors["Budgetsituation Kunde"][] = 10;
             $factors["Nutzungsabhängig"][] = 5;

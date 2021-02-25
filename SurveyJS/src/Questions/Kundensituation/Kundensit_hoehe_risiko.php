@@ -9,6 +9,7 @@ class Kundensit_hoehe_risiko extends Question
         switch ($value)
         {
             case "1":
+                $factors["Risiko Kunde"][] = 0;
                 $factors["Risiko Systel"][] = 10;
                 break;
             case "2":
@@ -25,6 +26,7 @@ class Kundensit_hoehe_risiko extends Question
                 break;
             case "5":
                 $factors["Risiko Kunde"][] = 10;
+                $factors["Risiko Systel"][] = 0;
                 break;
         }
     }

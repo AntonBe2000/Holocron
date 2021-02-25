@@ -12,7 +12,7 @@ class Markt_vergleichbare_produkte extends Question
                 break;
             case "Nein":
                 $factors["Preisbereitschaft"][] = 2;
-                $factors["Modell_am_Markt"][] = -10;
+                $factors["Modell_am_Markt"][] = 0;
                 break;
         }
     }

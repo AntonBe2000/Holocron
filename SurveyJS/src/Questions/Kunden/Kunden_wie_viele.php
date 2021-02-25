@@ -8,15 +8,16 @@ class Kunden_wie_viele extends Question
         switch ($value)
         {
             case "1":
-                $factors["Risiko Systel"][] = -5;
+                $factors["Risiko Systel"][] = 2;
+                $factors["Anzahl Nutzergruppen"][] = 0;
                 break;
             case "2-10":
-                $factors["Risiko Systel"][] = -2;
+                $factors["Risiko Systel"][] = 3;
                 $factors["Anzahl Nutzergruppen"][] = 3;
                 $factors["Nutzungserfassung"][] = 2;
                 break;
             case "10-100":
-                $factors["Risiko Systel"][] = 2;
+                $factors["Risiko Systel"][] = 4;
                 $factors["Anzahl Nutzergruppen"][] = 7;
                 $factors["Nutzungserfassung"][] = 5;
                 break;
