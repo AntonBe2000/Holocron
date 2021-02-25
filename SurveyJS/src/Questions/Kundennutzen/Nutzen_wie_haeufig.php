@@ -8,19 +8,19 @@ class Nutzen_wie_haeufig extends Question
         switch ($value)
         {
             case "1":
-                $factors["Bedürfnishäufigkeit"][] = 1;
+                $factors["Bedürfnishäufigkeit"]["values"][] = 1;
                 break;
             case "2":
-                $factors["Bedürfnishäufigkeit"][] = 3;
+                $factors["Bedürfnishäufigkeit"]["values"][] = 3;
                 break;
             case "3":
-                $factors["Bedürfnishäufigkeit"][] = 5;
+                $factors["Bedürfnishäufigkeit"]["values"][] = 5;
                 break;
             case "4":
-                $factors["Bedürfnishäufigkeit"][] = 8;
+                $factors["Bedürfnishäufigkeit"]["values"][] = 8;
                 break;
             case "5":
-                $factors["Bedürfnishäufigkeit"][] = 10;
+                $factors["Bedürfnishäufigkeit"]["values"][] = 10;
                 break;
         }
     }

@@ -20,6 +20,12 @@ class FactorObserver implements SplObserver
 
     public function getFactors()
     {
+        foreach($this->factors as $factor => $data) {
+            $values = $data["values"];
+            if( ! isset($data["avgValue"])) {
+                $this->factors[$factor]["avgValue"] = empty($values) ? 0 : array_sum($values) / count($values);
+            }
+        }
         return $this->factors;
     }
 

@@ -1,5 +1,6 @@
 function surveyData() {
     return {
+        debug: {},
         questionnaire: window.questionnaire,
         pricingModels: window.pricingModels,
         excluded: {},
@@ -19,6 +20,12 @@ function surveyData() {
         },
         init: function () {
             var json = this.questionnaire;
+
+            if(Object.keys(this.debug).length > 0) {
+                this.preismodell = this.debug.preismodell;
+                this.factors = this.debug.factors;
+                this.excluded = this.debug.excluded;
+            }
 
             Survey.StylesManager.applyTheme("default");
 

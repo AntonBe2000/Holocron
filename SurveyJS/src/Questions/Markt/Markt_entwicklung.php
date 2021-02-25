@@ -7,22 +7,22 @@ class Markt_entwicklung extends Question
     {
         switch ($value) {
             case "Hohes Wachstum":
-                $factors["Risiko Systel"][] = 0;
-                $factors["Preisbereitschaft"][] = 10;
-                $factors["Skalierbarkeit"][] = 10;
-                $factors["Nutzungserfassung"][] = 10;
+                $factors["Risiko Systel"]["values"][] = 0;
+                $factors["Preisbereitschaft"]["values"][] = 10;
+                $factors["Skalierbarkeit"]["values"][] = 10;
+                $factors["Nutzungserfassung"]["values"][] = 10;
                 break;
             case "Mittleres Wachstum":
-                $factors["Risiko Systel"][] = 5;
-                $factors["Preisbereitschaft"][] = 5;
-                $factors["Skalierbarkeit"][] = 5;
-                $factors["Nutzungserfassung"][] = 5;
+                $factors["Risiko Systel"]["values"][] = 5;
+                $factors["Preisbereitschaft"]["values"][] = 5;
+                $factors["Skalierbarkeit"]["values"][] = 5;
+                $factors["Nutzungserfassung"]["values"][] = 5;
                 break;
             case "Markt stagniert":
-                $factors["Risiko Systel"][] = 10;
-                $factors["Preisbereitschaft"][] = 2;
-                $factors["Skalierbarkeit"][] = 2;
-                $factors["Nutzungserfassung"][] = 3;
+                $factors["Risiko Systel"]["values"][] = 10;
+                $factors["Preisbereitschaft"]["values"][] = 2;
+                $factors["Skalierbarkeit"]["values"][] = 2;
+                $factors["Nutzungserfassung"]["values"][] = 3;
                 break;
         }
     }

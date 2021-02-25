@@ -7,24 +7,24 @@ class Kundensit_nutzergruppen extends Question
     {
         switch ($value) {
             case "Eine Nutzergruppe":
-                $factors["Nutzer"][] = 1;
-                $factors["Risiko Systel"][] = 7;
-                $factors["Anzahl Nutzergruppen"][] = 1;
-                $factors["Skalierbarkeit"][] = 1;
-                $factors["Nutzungserfassung"][] = 1;
+                $factors["Nutzer"]["values"][] = 1;
+                $factors["Risiko Systel"]["values"][] = 7;
+                $factors["Anzahl Nutzergruppen"]["values"][] = 1;
+                $factors["Skalierbarkeit"]["values"][] = 1;
+                $factors["Nutzungserfassung"]["values"][] = 1;
                 break;
             case "Zwei Nutzergruppen":
-                $factors["Nutzer"][] = 5;
-                $factors["Risiko Systel"][] = 3;
-                $factors["Anzahl Nutzergruppen"][] = 5;
-                $factors["Skalierbarkeit"][] = 5;
-                $factors["Nutzungserfassung"][] = 5;
+                $factors["Nutzer"]["values"][] = 5;
+                $factors["Risiko Systel"]["values"][] = 3;
+                $factors["Anzahl Nutzergruppen"]["values"][] = 5;
+                $factors["Skalierbarkeit"]["values"][] = 5;
+                $factors["Nutzungserfassung"]["values"][] = 5;
                 break;
             case "Mehr als zwei Nutzergruppen":
-                $factors["Nutzer"][] = 7;
-                $factors["Anzahl Nutzergruppen"][] = 7;
-                $factors["Skalierbarkeit"][] = 7;
-                $factors["Nutzungserfassung"][] = 7;
+                $factors["Nutzer"]["values"][] = 7;
+                $factors["Anzahl Nutzergruppen"]["values"][] = 7;
+                $factors["Skalierbarkeit"]["values"][] = 7;
+                $factors["Nutzungserfassung"]["values"][] = 7;
                 break;
         }
     }

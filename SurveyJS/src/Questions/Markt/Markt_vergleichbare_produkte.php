@@ -7,12 +7,12 @@ class Markt_vergleichbare_produkte extends Question
     {
         switch ($value) {
             case "Ja":
-                $factors["Preisbereitschaft"][] = 8;
-                $factors["Modell_am_Markt"][] = 10;
+                $factors["Preisbereitschaft"]["values"][] = 8;
+                $factors["Modell_am_Markt"]["values"][] = 10;
                 break;
             case "Nein":
-                $factors["Preisbereitschaft"][] = 2;
-                $factors["Modell_am_Markt"][] = 0;
+                $factors["Preisbereitschaft"]["values"][] = 2;
+                $factors["Modell_am_Markt"]["values"][] = 0;
                 break;
         }
     }

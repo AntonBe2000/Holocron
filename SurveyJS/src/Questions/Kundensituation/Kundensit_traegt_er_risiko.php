@@ -7,10 +7,10 @@ class Kundensit_traegt_er_risiko extends Question
     {
         switch ($value) {
             case "Ja":
-                $factors["Risiko"][] = 8;
+                $factors["Risiko"]["values"][] = 8;
                 break;
             case "Nein":
-                $factors["Risiko"][] = 2;
+                $factors["Risiko"]["values"][] = 2;
                 break;
         }
     }

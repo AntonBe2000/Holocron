@@ -43,7 +43,7 @@
                                             <div class="display: flex;">
                                                 <div class="progress-outer" style="flex: 1;margin-bottom: 3px;">
                                                     <div class="progress-inner">
-                                                        <div class="progress" :style="`width: ${factorValue.value * 10}%;background: blue`"></div>
+                                                        <div class="progress" :style="`width: ${factorValue.avgValue * 10}%;background: blue`"></div>
                                                     </div>
                                                 </div>
                                                 <div class="progress-outer" style="flex: 1;">
@@ -94,7 +94,7 @@
                                                 <div class="progress-outer" style="flex: 1;margin-bottom: 3px;">
                                                     <div class="progress-inner">
                                                         <div class="progress"
-                                                             :style="`width: ${factorValue.value * 10}%;background: blue`"></div>
+                                                             :style="`width: ${factorValue.avgValue * 10}%;background: blue`"></div>
                                                     </div>
                                                 </div>
                                                 <div class="progress-outer" style="flex: 1;">

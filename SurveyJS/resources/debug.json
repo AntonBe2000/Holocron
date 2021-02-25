@@ -1,0 +1,137 @@
+{
+  "excluded": {
+    "Inhaltsbasiert": "Dieses Preismodell wurde ausgeschlossen, weil die Mehrzahl der Kunden keine Beteiligung an ihrem Gewinn anbieten."
+  },
+  "preismodell": {
+    "Volumenbasiert": 41.52517482517483,
+    "Nutzungspauschale": 43.297902097902096,
+    "Pro Asset basiert": 46.297902097902096,
+    "Time and Material": 50.702097902097904,
+    "Transaktionsbasiert": 52.125174825174824,
+    "Inhaltsbasiert": 55.874825174825176
+  },
+  "factors": {
+    "Nutzer": {
+      "values": [
+        5,
+        5,
+        5
+      ],
+      "multiplier": 1,
+      "avgValue": 5
+    },
+    "Risiko Kunde": {
+      "values": [
+        5,
+        5,
+        8,
+        5
+      ],
+      "multiplier": 1,
+      "avgValue": 5.75
+    },
+    "Risiko Systel": {
+      "values": [
+        5,
+        5,
+        7,
+        5,
+        3,
+        3,
+        5,
+        3,
+        5,
+        10,
+        5,
+        0,
+        3
+      ],
+      "multiplier": 1,
+      "avgValue": 4.538461538461538
+    },
+    "Preisbereitschaft": {
+      "values": [
+        10,
+        4,
+        3,
+        2,
+        -5,
+        1,
+        3,
+        2,
+        2,
+        5,
+        10
+      ],
+      "multiplier": 1,
+      "avgValue": 3.3636363636363638
+    },
+    "Anzahl Nutzergruppen": {
+      "values": [
+        4,
+        5
+      ],
+      "multiplier": 1,
+      "avgValue": 4.5
+    },
+    "Budgetsituation Kunde": {
+      "values": [
+        10,
+        7,
+        3,
+        3,
+        3
+      ],
+      "multiplier": 1,
+      "avgValue": 5.2
+    },
+    "Bedürfnishäufigkeit": {
+      "values": [
+        6,
+        3
+      ],
+      "multiplier": 1,
+      "avgValue": 4.5
+    },
+    "Skalierbarkeit": {
+      "values": [
+        5,
+        2
+      ],
+      "multiplier": 1,
+      "avgValue": 3.5
+    },
+    "Nutzungsabhängig": {
+      "values": [
+        5,
+        0,
+        4,
+        1
+      ],
+      "multiplier": 1,
+      "avgValue": 2.5
+    },
+    "Erfahrung_Kunde": {
+      "values": [],
+      "multiplier": 1,
+      "avgValue": 0
+    },
+    "Nutzungserfassung": {
+      "values": [
+        5,
+        3,
+        3,
+        10
+      ],
+      "multiplier": 1,
+      "avgValue": 5.25
+    },
+    "Modell_am_Markt": {
+      "values": [
+        0
+      ],
+      "multiplier": 1,
+      "avgValue": 0
+    }
+  }
+}
