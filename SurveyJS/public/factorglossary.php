@@ -46,12 +46,6 @@
             anfällig für Insolvenz
         </dd>
 
-        <dt>Geschäftsrisiko Kunde</dt>
-        <dd>Das Geschäftsrisiko des Kunden beschreibt das Risiko des Kunden, welches aus dem operativen Tagesgeschäft
-            des Kunden hervorgeht. Beispiel: Hohe Fixkosten eines Unternehmens machen ein Unternehmen bei Absatzrückgang
-            anfällig für Insolvenz
-        </dd>
-
         <dt>Systel-internes Risiko</dt>
         <dd>Das Systel-interne Risiko beschreibt jenes Risiko für DB Systel, welches mit der Entwicklung und dem Betrieb
             eines Services einhergeht. Beispiel: Hält das Kundenunternehmen den Service für geschäftskritisch, dann ist
