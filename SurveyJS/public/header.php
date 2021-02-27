@@ -20,8 +20,8 @@
 
 <link rel="stylesheet" href="stylesheets/general_style.css"/>
     <link rel="stylesheet" href="stylesheets/indexstyle.css"/>
-    <link rel="stylesheet" href="stylesheets/survey.css" />
-    <link rel="stylesheet" href="stylesheets/modalstyle.css" />
+    <link rel="stylesheet" href="stylesheets/survey.css"/>
+    <link rel="stylesheet" href="stylesheets/modalstyle.css"/>
     <script src="scripts/survey.js"></script>
     <style>
         .factor {
@@ -29,5 +29,13 @@
         }
     </style>
 </head>
+<?php
+
+session_start();
+if (!isset($_SESSION['userid'])) {
+    die('Bitte zuerst <a href="login.php">einloggen</a>');
+}
+?>
+
 <body>
 
