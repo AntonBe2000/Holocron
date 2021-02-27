@@ -1,10 +1,10 @@
-<?php include("header.html");?>
+<?php include("header.php");?>
 <ul class="topnav">
     <li><img src="assets/nav_holocron.png" alt="bild" height="36" width="40" id="navbar_image"></li>
     <li><a href="index.php">Beratung</a></li>
     <li><a class="active" href="factorglossary.php">Faktoren</a></li>
     <li><a href="modelle_info.php">Preismodelle</a></li>
-    <!-- <li class="right"><a href="#">Logout</a></li> -->
+    <?php if(isset($_SESSION['userid'])) {echo '<li class="right"><a href="logout.php">Logout</a></li>';}?>
 </ul>
 
 <style>
@@ -38,12 +38,6 @@
         <dd>Der Faktor Anzahl End-Nutzer beschreibt, wie viele Endnutzer bzw. Endanwender ein Service hat. Dabei ist
             irrelevant, ob dies zahlende oder nicht zahlende Endnutzer sind. Zum Beispiel: DB Navigator als Service hat
             viele Endkunden, ein technischer Service wie PVG hat lediglich einen Kunden.
-        </dd>
-
-        <dt>Geschäftsrisiko Kunde</dt>
-        <dd>Das Geschäftsrisiko des Kunden beschreibt das Risiko des Kunden, welches aus dem operativen Tagesgeschäft
-            des Kunden hervorgeht. Beispiel: Hohe Fixkosten eines Unternehmens machen ein Unternehmen bei Absatzrückgang
-            anfällig für Insolvenz
         </dd>
 
         <dt>Geschäftsrisiko Kunde</dt>

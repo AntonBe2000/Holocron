@@ -1,4 +1,4 @@
-<?php include("header.html"); ?>
+<?php include("header.php"); ?>
 <script>
     window.questionnaire = <?php echo file_get_contents(__DIR__ . "/questionnaire.json"); ?>;
     window.pricingModels = <?php echo file_get_contents(__DIR__ . "/pricingModels.json"); ?>;
@@ -8,7 +8,7 @@
     <li><a class="active" href="index.php">Beratung</a></li>
     <li><a href="factorglossary.php">Faktoren</a></li>
     <li><a href="modelle_info.php">Preismodelle</a></li>
-    <!-- <li class="right"><a href="#">Logout</a></li> -->
+    <?php if(isset($_SESSION['userid'])) {echo '<li class="right"><a href="logout.php">Logout</a></li>';}?>
 </ul>
 <main>
 <div x-data="surveyData()" x-init="init()">

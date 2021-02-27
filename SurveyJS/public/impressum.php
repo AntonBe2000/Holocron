@@ -1,4 +1,4 @@
-<?php include("header.html") ?>
+<?php include("header.php") ?>
     <ul class="topnav">
         <li><img src="assets/nav_holocron.png" alt="bild" height="36" width="40" id="navbar_image"></li>
         <li><a href="index.php">Beratung</a></li>

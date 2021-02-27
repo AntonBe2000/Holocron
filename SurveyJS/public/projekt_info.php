@@ -1,5 +1,5 @@
 <?php
-include ("header.html"); ?>
+include("header.php"); ?>
 
     Diese Seite befindet sich im Aufbau
 
