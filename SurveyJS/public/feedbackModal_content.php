@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <span class="close">&times;</span>
+    <span class="close"><form><input type="submit" class="close" value="x"></form></span>
     <h2>Feedback</h2>
 </div>
 <div class="modal-body">

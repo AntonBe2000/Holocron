@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <span class="close">x</span>
+    <span class="close"><form><input type="submit" class="close" value="x"></form></span>
     <h2>Kontaktaufnahme</h2>
 </div>
 <div class="modal-body">

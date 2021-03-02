@@ -71,6 +71,7 @@ body {
 /* The Close Button */
 .close {
     color: white;
+    background-color: #4762c4;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -79,6 +80,7 @@ body {
 .close:hover,
 .close:focus {
     color: #000;
+    background-color: #4762c4;
     text-decoration: none;
     cursor: pointer;
 }
