@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <span class="close">&times;</span>
+    <button class="close" href="" onclick="javascript:show('feedbackModal'); return false">x</button>
     <h2>Feedback</h2>
 </div>
 <div class="modal-body">

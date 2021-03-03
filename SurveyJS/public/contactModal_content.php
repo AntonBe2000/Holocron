@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <span class="close">x</span>
+    <button class="close" href="" onclick="javascript:show('contactModal'); return false">x</button>
     <h2>Kontaktaufnahme</h2>
 </div>
 <div class="modal-body">
