@@ -1,17 +1,17 @@
-<button class="button" id="kontaktBtn">Kontakt aufnehmen</button>
+<button class="button" id="contactBtn">Kontakt aufnehmen</button>
 <!-- The Modal -->
-<div id="kontaktModal" class="modal">
+<div id="contactModal" class="modal">
     <!-- Modal content -->
-    <div class="kontaktModal-content">
-        <?php include("kontaktModal_content.php"); ?>
+    <div class="contactModal-content">
+        <?php include("contactModal_content.php"); ?>
     </div>
 </div>
 
 <script>
     // Get the modal
-    var modal1 = document.getElementById("kontaktModal");
+    var modal1 = document.getElementById("contactModal");
     // Get the button that opens the modal
-    var btn = document.getElementById("kontaktBtn");
+    var btn = document.getElementById("contactBtn");
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
     // When the user clicks the button, open the modal
@@ -26,6 +26,12 @@
     window.onclick = function (event) {
         if (event.target == modal1) {
             modal1.style.display = "none";
+        }
+    }
+    function show(id) {
+        if (document.getElementById) {
+            var mydiv = document.getElementById(id);
+            mydiv.style.display = (mydiv.style.display == 'block' ? 'none' : 'block');
         }
     }
 </script>
