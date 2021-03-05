@@ -76,7 +76,7 @@
                                 <span x-text="modell"></span>
                             </div>
                             <div class="progress-outer">
-                                <div class="progress big" :style="`width: ${100 - (value / 1)}%`"></div>
+                                <div class="progress bigOut" :style="`width: ${100 - (value / 1)}%`"></div>
                             </div>
                             <span x-on:click="tooltips[modell] = true" style="position:relative; cursor:pointer;width: 24px;">
                                 <svg width="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

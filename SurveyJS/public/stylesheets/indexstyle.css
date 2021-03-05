@@ -10,8 +10,16 @@
     background: #4caf50;
     height: 100%;
 }
+.outprogress {
+    background: #af5703;
+    height: 100%;
+}
 
 .progress.big {
+    height: 50%;
+}
+.progress.bigOut {
+    background: #af5703;
     height: 50%;
 }
 
