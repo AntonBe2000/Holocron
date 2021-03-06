@@ -1,0 +1,55 @@
+.canvas {
+    min-height: 500px;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    background: gray;
+    border: 2px solid #444;
+    margin: 20px auto 0 auto;
+    color: #fff;
+    margin-bottom: 5%;
+}
+
+.canvas-column {
+    flex: 1;
+    height: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.canvas-cell {
+    flex: 1;
+    display: flex;
+    border: 1px solid #666;
+    flex-direction: column;
+}
+
+.canvas-cell .header {
+    display: flex;
+    padding: 5px;
+    border-bottom: 1px dotted #222;
+    height: auto;
+    background-image: linear-gradient(to right, #000, rgba(79, 78, 78, 0.59))
+}
+
+.canvas-cell .header img {
+    height: 25px;
+    margin-right: 10px;
+}
+
+.canvas-cell .content {
+    padding: 10px;
+    flex: 1;
+}
+
+.canvas-cell .bar-outer {
+    width: 100px;
+    border: 1px solid #444;
+    height: 10px;
+}
+
+.canvas-cell .bar-inner {
+    background: #4caf50;
+    height: 10px;
+}

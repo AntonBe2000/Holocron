@@ -15,11 +15,14 @@
     <?php if(isset($_SESSION['userid'])) {echo '<li class="right"><a href="logout.php">Logout</a></li>';}?>
 </ul>
 <main>
+
 <div x-data="surveyData()" x-init="init()">
     <div id="surveyElement"></div>
     <div id="surveyResultElement"></div>
     <script src="scripts/index.js"></script>
+
     <div id="surveyResult" x-show="Object.entries(preismodell).length > 0">
+        <h2>Empfehlung</h2>
         <div class="included">
             <div><b>Empfohlene Modelle</b></div>
             <template x-for="[modell, value] in Object.entries(preismodell)">
@@ -126,7 +129,25 @@
         </div>
         <!-- Modals -->
         <?php include("contact_modal.php"); ?>
-        <p><a href="factorglossary.php" target="_blank">Hier</a> kannst du nachlesen wofür die einzelnen Faktoren stehen.</p>
+        <p><a href="factorglossary.php" target="_blank">Hier</a> kannst du nachlesen wofür die einzelnen Faktoren stehen.</p></p>
+    <div>
+        <h2>Pricing Model Innovation Canvas generieren</h2>
+        <p>Hier kannst Du ein Canvas zur Begründung und Darstellung deines gewählten Preismodells erstellen.</p>
+        <select name="pricingModelSelect" id="pricingModelSelect" onclick="canvas_generate()">
+            <option value="Transaktionsbasiert">Transaktionsbasiert</option>
+            <option value="ProAsset">Pro Asset basiert</option>
+            <option value="Nutzungspauschale">Nutzungspauschale</option>
+            <option value="TimeMaterial">Time and Material</option>
+            <option value="Volumenbasiert">Volumenbasiert</option>
+            <option value="Inhaltsbasiert">Inhaltsbasiert</option>
+        </select>
+        <script>
+            function canvas_generate() {
+              //  document.getElementById("pricingModelSelect")
+            }
+        </script>
+    </div>
+
     </div>
     <?php include("feedback_modal.php"); ?>
 </div>

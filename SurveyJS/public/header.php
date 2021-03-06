@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="stylesheets/indexstyle.css"/>
     <link rel="stylesheet" href="stylesheets/survey.css"/>
     <link rel="stylesheet" href="stylesheets/modalstyle.css"/>
+    <link rel="stylesheet" href="stylesheets/canvas_style.css"/>
     <script src="scripts/survey.js"></script>
     <style>
         .factor {

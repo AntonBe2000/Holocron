@@ -1,19 +1,44 @@
 <?php
 include("header.php");
 include("../configurations/config.php");
-
 define("NAMES", [
-    "kundensit_risiko_enable" => "YOLO",
-    "kundensit_tragen_sie_risiko" => "RISIKO?",
-    "kundensit_kerngeschaeft_korreliert" => "Korreliert"
+        //Kategorie Kunden
+    "kunden_wer_ist" =>"Hauptkunde",
+    "kunden_welche_art"=>"Art:",
+    "kunden_wie_viele"=>"Anzahl Nutzer",
+    "kundensit_bisherige_loesung"=>"Bisher eingesetzte Lösung:",
+    "kundensit_loesung_aufwaendig"=>"Aufwand bisher",
+    "kundensit_nutzergruppen" =>"Anzahl Nutzergruppen:",
+    "kundensit_planungssicherheit"=>"Planungssicherheit des Kunden",
+    "kundensit_budgetsituation"=>"Budgetsituation des Kunden",
+
+    //Markt
+    "markt_entwicklung"=>"Marktentwicklung:",
+    "markt_eigenrealisierung"=>"Aufwand Eigenrealisierung Kunde",
+
+    //Nutzen
+    "nutzen_prio_beduerfnisse"=>"",
+
+    //Kategorie Kundenrisiko
+    "kundensit_hoehe_risiko"=>"Geschäftsrisiko Kunde",
+    "kundensit_zusammenbrechen_service" =>"Geschäftskritischer Service",
+    "kundensit_kerngeschaeft_korreliert" => "Korrelation Service mit Kerngeschäft",
+
+    //Kategorie Technik
+    "technik_erfassung_moeglich" =>"Tracking der Nutzung des Services möglich?",
+    "technik_welche_erfassung" =>"Wie?"
 ]);
 
 define("TYPES", [
     "nutzen_prio_beduerfnisse" => "multiple",
+    "technik_welche_erfassung" =>"multiple",
+    "kundensit_hoehe_risiko"=>"bar",
     "kundensit_budgetsituation" => "bar",
     "kundensit_planungssicherheit" => "bar",
     "kundensit_kerngeschaeft_korreliert" => "bar",
-    "kundensit_loesung_aufwaendig" => "bar"
+    "kundensit_loesung_aufwaendig" => "bar",
+    "kundensit_zusammenbrechen_service" =>"bar",
+    "markt_eigenrealisierung"=>"bar"
 ]);
 
 function getAnswers($surveyIdentifier)
@@ -36,7 +61,7 @@ function getCategoryFromQuestion(string $questionKey)
     return null;
 }
 
-$answers = getAnswers("604368a37208c");
+$answers = getAnswers("604379f019c8f");
 
 $categories = [];
 
@@ -61,79 +86,6 @@ foreach($answers as $key => $value) {
     <li><a href="modelle_info.php">Preismodelle</a></li>
     <?php if(isset($_SESSION['userid'])) {echo '<li class="right"><a href="logout.php">Logout</a></li>';}?>
 </ul>
-<?php
-
-$nationality = [
-    "german" => "ellipse, black, red, yellow",
-    "france" => "ellipse, blue, white, red",
-    "italy" => "ellipse, green, white, red",
-    "netherlands" => "ellipse, red, white, blue",
-    "ivory coast" => "ellipse, green, white, orange",
-    "romania" => "ellipse, blue, yellow, red",
-    "belgium" => "ellipse, black, yellow, red"
-];
-
-function getNationality($nationality) {
-    return $nationality[array_rand($nationality, 1)];
-}
-
-?>
-
-<style>
-    .canvas {
-        min-height: 500px;
-        width: 1000px;
-        display: flex;
-        flex-direction: row;
-        background: gray;
-        border: 2px solid #444;
-        margin: 20px auto 0 auto;
-        color: #fff;
-    }
-
-    .canvas-column {
-        flex: 1;
-        height: 100%;
-        min-height: 500px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .canvas-cell {
-        flex: 1;
-        display: flex;
-        border: 1px solid #666;
-        flex-direction: column;
-    }
-
-    .canvas-cell .header {
-        display: flex;
-        padding: 5px;
-        border-bottom: 1px dotted #222;
-        height: auto;
-    }
-
-    .canvas-cell .header img {
-        height: 25px;
-        margin-right: 10px;
-    }
-
-    .canvas-cell .content {
-        padding: 10px;
-        flex: 1;
-    }
-
-    .canvas-cell .bar-outer {
-        width: 100px;
-        border: 1px solid #444;
-        height: 10px;
-    }
-
-    .canvas-cell .bar-inner {
-        background: #4caf50;
-        height: 10px;
-    }
-</style>
 
 <?php
 
@@ -146,92 +98,107 @@ function getCanvasContent(string $category, array $categories)
 
         switch($answer["type"]) {
             case "multiple":
-                echo "{$answer["name"]}: <ul>";
+                echo "{$answer["name"]} <ul>";
                 foreach(explode("#", $answer["answer"]) as $part) {
                     echo "<li>{$part}</li>";
                 }
                 echo "</ul>";
                 break;
             case "bar":
-                echo "{$answer["name"]}: ";
+                echo "{$answer["name"]} ";
                 $width = (($answer["answer"] / 5) * 100) . "%";
                 echo "<div class='bar-outer'><div class='bar-inner' style='width: {$width}'></div></div>";
                 break;
             default:
-                echo $answer["name"] . ": " . $answer["answer"];
+                echo $answer["name"] . " " . $answer["answer"];
                 break;
         }
         echo "<br>";
     }
 }
-
+//var_dump($categories);
 ?>
 
-<div class="canvas">
-    <div class="canvas-column">
-        <div class="canvas-cell" style="flex: 1">
-            <div class="header" style="background-image: radial-gradient(<?php echo getNationality($nationality); ?>)">
-                <div class="icon"><img src="assets/unknown.png" /></div>
-                <div class="name">Kunde</div>
-            </div>
-            <div class="content">
-                <?php getCanvasContent("Kunden", $categories); ?>
-            </div>
+    <h1>Pricing Model Innovation Canvas</h1>
+    <div class="canvas">
+        <div class="canvas-column">
+            <div class="canvas-cell" style="flex: 1">
+                <div class="header">
+                    <div class="icon"><img src="assets/unknown.png"/></div>
+                    <div class="name">Kunde</div>
+                </div>
+                <div class="content">
+                    <?php getCanvasContent("Kunden", $categories); ?>
+                </div>
 
+            </div>
+            <div class="canvas-cell" style="flex: 1">
+                <div class="header">
+                    <div class="icon"><img src="assets/unknown.png"/></div>
+                    <div class="name">Kundensituation</div>
+                </div>
+                <div class="content">
+                    <?php getCanvasContent("Kundensituation", $categories); ?>
+                </div>
+
+            </div>
         </div>
-        <div class="canvas-cell" style="flex: 1">
-            <div class="header" style="background-image: radial-gradient(<?php echo getNationality($nationality); ?>)">
-                <div class="icon"><img src="assets/unknown.png" /></div>
-                <div class="name">Kundensituation</div>
-            </div>
-            <div class="content">
-                <?php getCanvasContent("Kundensituation", $categories); ?>
-            </div>
+        <div class="canvas-column">
+            <div class="canvas-cell">
+                <div class="header">
+                    <div class="icon"><img src="assets/unknown.png"/></div>
+                    <div class="name">Empfohlenes Preismodell</div>
+                </div>
+                <div class="content">
+                    Transaktionsbasiert<br>
+                    <p>There’s only one way you treat that kind of behavior. You have a bigger problems by counting on the
+                    poll, I scored really high marks on almost 20 years. You wonder why we get the crowds are the wall."
+                        I said, "100 percent.</p>
+                    <br>
+                   <p> Now I know some people say, oh he is so much wealth out there that can make our country needs a
+                    truly great honor. Thank you. They’re going to say, “Well, we don’t have talented people that are
+                    talking about you.
+                    But they’re doing s a couple of days ago focused on just that. America must unite the whole
+                       points.</p>
 
+                </div>
+
+            </div>
+        </div>
+        <div class="canvas-column">
+            <div class="canvas-cell" style="flex: 1">
+                <div class="header">
+                    <div class="icon"><img src="assets/unknown.png"/></div>
+                    <div class="name">Markt</div>
+                </div>
+                <div class="content">
+                    <?php getCanvasContent("Markt", $categories); ?>
+                </div>
+
+            </div>
+            <div class="canvas-cell" style="flex: 2">
+                <div class="header">
+                    <div class="icon"><img src="assets/unknown.png"/></div>
+                    <div class="name">Nutzen</div>
+                </div>
+                <div class="content">
+                    <?php getCanvasContent("Kundennutzen", $categories); ?>
+                </div>
+
+            </div>
+            <div class="canvas-cell" style="flex: 1">
+                <div class="header">
+                    <div class="icon"><img src="assets/unknown.png"/></div>
+                    <div class="name">Technische Rahmenbedingungen</div>
+                </div>
+                <div class="content">
+                    <?php getCanvasContent("Technik", $categories); ?>
+                </div>
+
+            </div>
         </div>
     </div>
-    <div class="canvas-column">
-        <div class="canvas-cell">
-            <div class="header" style="background-image: radial-gradient(<?php echo getNationality($nationality); ?>)">
-                <div class="icon"><img src="assets/unknown.png" /></div>
-                <div class="name">Empfohlenes Preismodell</div>
-            </div>
-            <div class="content">
-                Preis und Modell
-            </div>
-
-        </div>
-    </div>
-    <div class="canvas-column">
-        <div class="canvas-cell" style="flex: 1">
-            <div class="header" style="background-image: radial-gradient(<?php echo getNationality($nationality); ?>)">
-                <div class="icon"><img src="assets/unknown.png" /></div>
-                <div class="name">Markt</div>
-            </div>
-            <div class="content">
-                <?php getCanvasContent("Markt", $categories); ?>
-            </div>
-
-        </div>
-        <div class="canvas-cell" style="flex: 2">
-            <div class="header" style="background-image: radial-gradient(<?php echo getNationality($nationality); ?>)">
-                <div class="icon"><img src="assets/unknown.png" /></div>
-                <div class="name">Nutzen</div>
-            </div>
-            <div class="content">
-                <?php getCanvasContent("Kundennutzen", $categories); ?>
-            </div>
-
-        </div>
-        <div class="canvas-cell" style="flex: 1">
-            <div class="header" style="background-image: radial-gradient(<?php echo getNationality($nationality); ?>)">
-                <div class="icon"><img src="assets/unknown.png" /></div>
-                <div class="name">Technische Rahmenbedingungen</div>
-            </div>
-            <div class="content">
-                <?php getCanvasContent("Technik", $categories); ?>
-            </div>
-
-        </div>
-    </div>
+<div>
+    <button class="button">Download als PDF</button>
 </div>
+<?php include("footer.html"); ?>
