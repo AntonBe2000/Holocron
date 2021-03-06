@@ -1,10 +1,10 @@
 <div class="modal-header">
-    <button class="close" href="" onclick="javascript:show('contactModal'); return false">x</button>
+    <button class="close">x</button>
     <h2>Kontaktaufnahme</h2>
 </div>
 <div class="modal-body">
-    <form name="kontaktMeldung" id="kontaktMeldung" method="post" action="
-<?php
+
+    <?php
     //Parameter der Meldung abfragen
     $vorname = $_POST["vorname"]; //Vorname
     $nachname = $_POST["nachname"]; //Nachname
@@ -15,10 +15,25 @@
     $headers = "From: holocron@anton-bechtloff.de" . "\r\n";
     $headers .= "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-Type: text/plain;charset=utf-8";
+
+//    function getHeaderStr(array $headers)
+//    {
+//        return implode("\r\n", array_map(function($value, $key) {
+//            return "{$key}: {$value}";
+//        }, array_values($headers), array_keys($headers)));
+//    }
+//
+//    $headers = getHeaderStr([
+//        "From" => "holocron@anton-bechtloff.de",
+//        "MIME-Version" => "1.0",
+//        "Content-Type" => "text/plain;charset=utf-8"
+//    ]);
+
     //Mailfunktion aufrufen
     mail("mail@anton-bechtloff.de", $betreff, $nachricht." ".$email, $headers);
-?>
-" enctype="multipart/form-data">
+    ?>
+
+    <form name="kontaktMeldung" id="kontaktMeldung" method="post" action="" enctype="multipart/form-data">
         <table>
             <tbody>
             <tr>

@@ -2,6 +2,10 @@
 <script>
     window.questionnaire = <?php echo file_get_contents(__DIR__ . "/questionnaire.json"); ?>;
     window.pricingModels = <?php echo file_get_contents(__DIR__ . "/pricingModels.json"); ?>;
+
+    $(document).on("click", ".modal .close", function() {
+        $(this).parents(".modal").first().hide()
+    })
 </script>
 <ul class="topnav">
     <li><img src="assets/nav_holocron.png" alt="bild" height="36" width="39" id="navbar_image"></li>
@@ -12,7 +16,7 @@
 </ul>
 <main>
 <div x-data="surveyData()" x-init="init()">
-    <div id="surveyElement"></div>                            
+    <div id="surveyElement"></div>
     <div id="surveyResultElement"></div>
     <script src="scripts/index.js"></script>
     <div id="surveyResult" x-show="Object.entries(preismodell).length > 0">

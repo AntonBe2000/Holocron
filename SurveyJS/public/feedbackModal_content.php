@@ -1,10 +1,9 @@
 <div class="modal-header">
-    <button class="close" href="" onclick="javascript:show('feedbackModal'); return false">x</button>
+    <button class="close">x</button>
     <h2>Feedback</h2>
 </div>
 <div class="modal-body">
-    <form name="feedback" id="feedback" method="post" action="
-<?php
+    <?php
     //Parameter der Meldung abfragen
     $akro = $_POST["akro"]; //Akronym
     $nachricht = $_POST["nachricht"]; //Nachricht
@@ -16,7 +15,7 @@
     //Mailfunktion aufrufen
     mail("mail@anton-bechtloff.de", $betreff, $nachricht, $headers);
     ?>
-    " enctype="multipart/form-data">
+    <form name="feedback" id="feedback" method="post" action="" enctype="multipart/form-data">
         <table>
             <tbody>
             <tr>

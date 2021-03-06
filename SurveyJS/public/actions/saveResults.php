@@ -33,6 +33,8 @@ foreach($results as $key => $result) {
 $Preismodell = new Preismodell();
 
 
+
+
 echo json_encode([
     "excluded" => $FactorObserver->getExcluded(),
     "preismodell" => $Preismodell->calculate($FactorObserver->getFactors(),$FactorObserver->getExcluded()),
