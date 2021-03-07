@@ -3,7 +3,7 @@ include("header.php");
 include("../configurations/config.php");
 define("NAMES", [
         //Kategorie Kunden
-    "kunden_wer_ist" =>"Hauptkunde",
+    "kunden_wer_ist" =>"Hauptkunde:",
     "kunden_welche_art"=>"Art:",
     "kunden_wie_viele"=>"Anzahl Nutzer",
     "kundensit_bisherige_loesung"=>"Bisher eingesetzte Lösung:",
@@ -11,11 +11,13 @@ define("NAMES", [
     "kundensit_nutzergruppen" =>"Anzahl Nutzergruppen:",
     "kundensit_planungssicherheit"=>"Planungssicherheit des Kunden",
     "kundensit_budgetsituation"=>"Budgetsituation des Kunden",
+    "kundensit_bisherig_geeignet "=>"Eignung bisherige Lösung",
 
     //Markt
     "markt_entwicklung"=>"Marktentwicklung:",
     "markt_eigenrealisierung"=>"Aufwand Eigenrealisierung Kunde",
-
+    "markt_vergleichbare_produkte" =>"Vergleichbare Produkte am Markt?",
+    "markt_preismodell_alt" =>"Häufigtes Preismodell am Markt:",
     //Nutzen
     "nutzen_prio_beduerfnisse"=>"",
 
@@ -26,19 +28,28 @@ define("NAMES", [
 
     //Kategorie Technik
     "technik_erfassung_moeglich" =>"Tracking der Nutzung des Services möglich?",
-    "technik_welche_erfassung" =>"Wie?"
+    "technik_welche_erfassung" =>"Wie?",
+    "technik_hohe_fixkosten" =>"Hohe Fixkosten?"
 ]);
 
 define("TYPES", [
     "nutzen_prio_beduerfnisse" => "multiple",
-    "technik_welche_erfassung" =>"multiple",
-    "kundensit_hoehe_risiko"=>"bar",
+    "kundensit_risiko_enable" => "hidden",
+    "kundensit_tragen_sie_risiko" =>"hidden",
+    "kundensit_zahlungsbereitschaft"=>"hidden",
+    "technik_welche_erfassung" => "multiple",
+    "kundensit_hoehe_risiko" => "bar",
     "kundensit_budgetsituation" => "bar",
     "kundensit_planungssicherheit" => "bar",
     "kundensit_kerngeschaeft_korreliert" => "bar",
     "kundensit_loesung_aufwaendig" => "bar",
-    "kundensit_zusammenbrechen_service" =>"bar",
-    "markt_eigenrealisierung"=>"bar"
+    "kundensit_zusammenbrechen_service" => "bar",
+    "markt_eigenrealisierung" => "bar",
+    "technik_hohe_fixkosten " =>"bar",
+    "nutzen_wie_haeufig"=>"hidden",
+    "nutzen_wie_haeufig "=>"hidden",
+    "kundensit_bisherig_geeignet "=>"bar",
+    "nutzen_wie_erfolgt "=>"hidden"
 ]);
 
 function getAnswers($surveyIdentifier)
@@ -53,19 +64,20 @@ function getAnswers($surveyIdentifier)
 
 function getCategoryFromQuestion(string $questionKey)
 {
-    foreach(QUESTIONS as $category => $questions) {
-        if(array_search($questionKey, $questions)) {
+    foreach (QUESTIONS as $category => $questions) {
+        if (array_search($questionKey, $questions) !== false) {
             return $category;
         }
     }
     return null;
 }
 
-$answers = getAnswers("604379f019c8f");
+//$answers = getAnswers("604379f019c8f");
+$answers = getAnswers($_SESSION["SurveyId"]);
 
 $categories = [];
 
-foreach($answers as $key => $value) {
+foreach ($answers as $key => $value) {
     $category = getCategoryFromQuestion($value["question_key"]);
 
     $categories[$category][] = [
@@ -99,7 +111,7 @@ function getCanvasContent(string $category, array $categories)
         switch($answer["type"]) {
             case "multiple":
                 echo "{$answer["name"]} <ul>";
-                foreach(explode("#", $answer["answer"]) as $part) {
+                foreach (explode("#", $answer["answer"]) as $part) {
                     echo "<li>{$part}</li>";
                 }
                 echo "</ul>";
@@ -108,6 +120,9 @@ function getCanvasContent(string $category, array $categories)
                 echo "{$answer["name"]} ";
                 $width = (($answer["answer"] / 5) * 100) . "%";
                 echo "<div class='bar-outer'><div class='bar-inner' style='width: {$width}'></div></div>";
+                break;
+            case "hidden":
+                continue 2;
                 break;
             default:
                 echo $answer["name"] . " " . $answer["answer"];
@@ -120,8 +135,45 @@ function getCanvasContent(string $category, array $categories)
 ?>
 
     <h1>Pricing Model Innovation Canvas</h1>
+
     <div>
-        <button class="button" onclick="CreatePDFfromHTML()">Download als PDF</button>
+        <p>Welches Preismodell soll angezeigt werden?</p>
+        <select name="pricingModelSelect" id="pricingModelSelect" onchange="canvas_generate()">
+            <option value="Transaktionsbasiert">Transaktionsbasiert</option>
+            <option value="ProAsset">Pro Asset basiert</option>
+            <option value="Nutzungspauschale">Nutzungspauschale</option>
+            <option value="TimeMaterial">Time and Material</option>
+            <option value="Volumenbasiert">Volumenbasiert</option>
+            <option value="Inhaltsbasiert">Inhaltsbasiert</option>
+        </select>
+        <script>
+            function canvas_generate() {
+                switch ($('#pricingModelSelect').val()) {
+                    case "Volumenbasiert":
+                        $('#pricingModelDescription').text("Im Volumenpreismodell wird für ein Kontingent an Transaktionen ein Fixpreis verrechnet.");
+                        break;
+                    case "Transaktionsbasiert":
+                        $('#pricingModelDescription').text("Beim Transaktionsmodell wird pro Abruf einer Funktionalität („API call“) verrechnet. " +
+                            "Die Kosten ergeben sich dabei aus einem fixen Basispreis und dem Service-individuellen Aufschlag");
+                        break;
+                    case "ProAsset":
+                        $('#pricingModelDescription').text("Beim \"Assetbasiertmodell\" wird den  Preis pro aktive Nutzer oder pro Objekt verrechnet");
+                        break;
+                    case "TimeMaterial":
+                        $('#pricingModelDescription').text("Es werden projektartig oder im DevOps Ansatz geleistete Stunden (Aufwand) und Arbeitsmittel in Rechnung gestellt.");
+                        break;
+                    case "Inhaltsbasiert":
+                        $('#pricingModelDescription').text("Im inhaltsbasiertem Modell hängt der Preis von bestimmten Faktoren " +
+                            "(z.B. dem Umsatz) ab. Neben Umsatz (Provisionsmodell) können auch andere Faktoren ge-nutzt werden (z.B. Anzahl Nutzer).");
+                        break;
+                    case "Nutzungspauschale":
+                        $('#pricingModelDescription').text("Bei der Nutzungspauschale wird ein Festpreis für zeitbegrenzte Nutzung eines Service verrechnet ");
+                        break;
+
+
+                }
+            }
+        </script>
     </div>
     <div class="canvas">
         <div class="canvas-column">
@@ -152,17 +204,8 @@ function getCanvasContent(string $category, array $categories)
                     <div class="icon"><img src="assets/unknown.png"/></div>
                     <div class="name">Empfohlenes Preismodell</div>
                 </div>
-                <div class="content">
-                    Transaktionsbasiert<br>
-                    <p>There’s only one way you treat that kind of behavior. You have a bigger problems by counting on the
-                    poll, I scored really high marks on almost 20 years. You wonder why we get the crowds are the wall."
-                        I said, "100 percent.</p>
-                    <br>
-                   <p> Now I know some people say, oh he is so much wealth out there that can make our country needs a
-                    truly great honor. Thank you. They’re going to say, “Well, we don’t have talented people that are
-                    talking about you.
-                    But they’re doing s a couple of days ago focused on just that. America must unite the whole
-                       points.</p>
+                <div class="content" id="pricingModelDescription">
+
 
                 </div>
 

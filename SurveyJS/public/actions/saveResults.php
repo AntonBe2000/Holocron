@@ -32,6 +32,8 @@ foreach($results as $key => $result) {
 
 $Preismodell = new Preismodell();
 
+session_start();
+$_SESSION["SurveyId"] = $surveyIdentifier;
 
 
 
