@@ -120,6 +120,9 @@ function getCanvasContent(string $category, array $categories)
 ?>
 
     <h1>Pricing Model Innovation Canvas</h1>
+    <div>
+        <button class="button" onclick="CreatePDFfromHTML()">Download als PDF</button>
+    </div>
     <div class="canvas">
         <div class="canvas-column">
             <div class="canvas-cell" style="flex: 1">
@@ -198,7 +201,7 @@ function getCanvasContent(string $category, array $categories)
             </div>
         </div>
     </div>
-<div>
-    <button class="button">Download als PDF</button>
-</div>
+    <div class="clearfix">
+
+
 <?php include("footer.html"); ?>

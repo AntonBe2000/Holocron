@@ -17,6 +17,12 @@
     <!-- Your platform (jquery) scripts. -->
     <link href="https://unpkg.com/survey-jquery@1.8.29/modern.css" type="text/css" rel="stylesheet" />
     <script src="https://unpkg.com/survey-jquery@1.8.29/survey.jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="scripts/feedback_modal.js"></script>
+    <script src="scripts/contact_modal.js"></script>
+    <script src="scripts/generatePDF.js"></script>
 
 <link rel="stylesheet" href="stylesheets/general_style.css"/>
     <link rel="stylesheet" href="stylesheets/indexstyle.css"/>
