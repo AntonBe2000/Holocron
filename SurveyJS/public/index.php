@@ -128,7 +128,6 @@
             </template>
         </div>
         <!-- Modals -->
-        <?php include("contact_modal.php"); ?>
         <p><a href="factorglossary.php" target="_blank">Hier</a> kannst du nachlesen wofür die einzelnen Faktoren
             stehen.</p></p>
 <div>

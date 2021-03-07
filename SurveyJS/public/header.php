@@ -23,6 +23,7 @@
     <script src="scripts/feedback_modal.js"></script>
     <script src="scripts/contact_modal.js"></script>
     <script src="scripts/generatePDF.js"></script>
+    <script src="scripts/canvas.js"></script>
 
 <link rel="stylesheet" href="stylesheets/general_style.css"/>
     <link rel="stylesheet" href="stylesheets/indexstyle.css"/>

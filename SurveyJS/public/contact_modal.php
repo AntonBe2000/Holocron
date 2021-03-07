@@ -1,3 +1,11 @@
+<script>
+    window.questionnaire = <?php echo file_get_contents(__DIR__ . "/questionnaire.json"); ?>;
+    window.pricingModels = <?php echo file_get_contents(__DIR__ . "/pricingModels.json"); ?>;
+
+    $(document).on("click", ".modal .close", function() {
+        $(this).parents(".modal").first().hide()
+    })
+</script>
 <button class="button" id="contactBtn">Kontakt aufnehmen</button>
 <!-- The Modal -->
 <div id="contactModal" class="modal">
