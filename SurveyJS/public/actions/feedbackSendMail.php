@@ -1,7 +1,9 @@
 <?php
+$json = json_decode(trim(file_get_contents("php://input")), true);
+$akro = $json["akro"];
+$nachricht = $json["nachricht"];
+
 //Parameter der Meldung abfragen
-$akro = $_POST["akro"]; //Akronym
-$nachricht = $_POST["nachricht"]; //Nachricht
 //E-Mail vorbereiten
 $betreff = "Holcron Feedback von " . $akro;
 $headers = "From: holocron@anton-bechtloff.de" . "\r\n";

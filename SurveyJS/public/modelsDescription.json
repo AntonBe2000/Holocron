@@ -1,0 +1,10 @@
+{
+  "Preismodelle": {
+    "Volumenbasiert": "Im Volumenpreismodell wird für ein Kontingent an Transaktionen ein Fixpreis verrechnet. ",
+    "Transaktionsbasiert": "Beim Transaktionsmodell wird pro Abruf einer Funktionalität („API call“) verrechnet. Die Kosten ergeben sich dabei aus einem fixen Basispreis und dem Service-individuellen Aufschlag",
+    "Pro Asset basiert": "Beim \"Assetbasiertmodell\" wird den  Preis pro aktive Nutzer oder pro Objekt verrechnet",
+    "Time and Material": "Es werden projektartig oder im DevOps Ansatz geleistete Stunden (Aufwand) und Arbeitsmittel in Rechnung gestellt. ",
+    "Inhaltsbasiert": "Im inhaltsbasiertem Modell hängt der Preis von bestimmten Faktoren (z.B. dem Umsatz) ab. Neben Umsatz (Provisionsmodell) können auch andere Faktoren ge-nutzt werden (z.B. Anzahl Nutzer).",
+    "Nutzungspauschale": "Bei der Nutzungspauschale wird ein Festpreis für zeitbegrenzte Nutzung eines Service verrechnet "
+  }
+}

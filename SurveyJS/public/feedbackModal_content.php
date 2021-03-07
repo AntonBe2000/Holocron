@@ -4,7 +4,7 @@
 </div>
 <div class="modal-body">
 
-    <form name="feedback" id="feedback" method="post" action="scripts/feedback_modal.js" enctype="multipart/form-data">
+    <form name="feedback" id="feedback" method="post" enctype="multipart/form-data" action="#">
         <table>
             <tbody>
             <tr>
@@ -13,13 +13,19 @@
             </tr>
             <tr>
                 <td><label for="nachricht">Feedback</label></td>
-                <td><textarea placeholder="Message..." rows="7" name="nachricht" id="nachricht" required></textarea>
+                <td><textarea placeholder="Message..." rows="7" name="nachricht" id="nachrichtFeedback"
+                              required></textarea>
                 </td>
             </tr>
             <tr>
                 <td></td>
                 <td>
                     <button type="submit" class="button">Absenden</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div id="success"></div>
                 </td>
             </tr>
             </tbody>

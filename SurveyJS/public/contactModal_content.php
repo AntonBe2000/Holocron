@@ -4,7 +4,7 @@
 </div>
 <div class="modal-body">
 
-    <form name="kontaktMeldung" id="kontaktMeldung" method="post" action="scripts/contact_modal.js" enctype="multipart/form-data">
+    <form name="kontaktMeldung" id="kontaktMeldung" method="post" action="scripts/contact_modal.js" onsubmit="sendMail(); return false" enctype="multipart/form-data">
         <table>
             <tbody>
             <tr>
