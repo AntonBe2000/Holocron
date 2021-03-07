@@ -111,6 +111,9 @@ Feedbackbutton
     width: 55%;
     height: 55%;
 }
+#faktorimage{
+    max-height: 240px;
+}
 /* Centered Containers*/
 .centeredContainer, h1{
     display: flex;

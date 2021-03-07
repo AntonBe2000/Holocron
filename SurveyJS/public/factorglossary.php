@@ -29,9 +29,15 @@
     }
 </style>
 <main>
-    <h1>Faktoren</h1>
-    <h2>Was sind Faktoren?</h2>
-<p>Faktoren sind Knoten in einem Netz zur Ermittlung eines geeigneten Preismodells zu den zuvor beantworteten Fragen. Sie sind sozusagen eine Zwischenschicht.</p>
+    <h1>Nutzenfaktoren</h1>
+    <h2>Was sind Nutzenfaktoren?</h2>
+    <p>Funktional repräsentiert ein Nutzenfaktor immer einen wichtigen Teilaspekt eines Preismodells. Es handelt sich hierbei um eine n:m Beziehung.</p>
+   <p>
+    Technisch betrachtet sind Nutzenfaktoren die Knoten einer logischen Zwischenschicht zwischen Antwortenschicht und Auswertungsschicht.
+    <img src="assets/erl_faktoren.png" width="981" height="638" id="faktorimage">
+    </p>
+
+
     <h2>Übersicht</h2>
     <dl>
         <dt>Anzahl End-Nutzer</dt>
