@@ -1,5 +1,6 @@
 <?php
 //Parameter der Meldung abfragen
+
 $vorname = $_POST["vorname"]; //Vorname
 $nachname = $_POST["nachname"]; //Nachname
 $nachricht = $_POST["nachricht"]; //E-Mail Adresse
