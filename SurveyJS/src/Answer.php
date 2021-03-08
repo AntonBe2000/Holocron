@@ -46,14 +46,14 @@ class Answer implements SplSubject
         }
 
         $PDO = new PDO("sqlite:" . __DIR__ . "/../resources/sqlite.db");
-        $query = "INSERT INTO answers (`survey_identifier`, `question_key`, `answer`, `time`)";
-        $query .= " VALUES (:survey_identifier, :question_key, :answer, :time)";
-
+        $query = "INSERT INTO answers (`survey_identifier`, `question_key`, `answer`, `time`,`PricingModels`)";
+        $query .= " VALUES (:survey_identifier, :question_key, :answer, :time, :PricingModels)";
         $statement = $PDO->prepare($query);
         $statement->bindValue(":survey_identifier", $this->surveyIdentifier);
         $statement->bindValue(":question_key", $this->key);
         $statement->bindValue(":answer", $this->value);
         $statement->bindValue(":time", date("Y-m-d H:i:s"));
+        $statement->bindValue(":PricingModels", null);
         $statement->execute();
         $this->notify();
     }

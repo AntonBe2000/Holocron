@@ -7,6 +7,14 @@
     <?php if(isset($_SESSION['userid'])) {echo '<li class="right"><a href="logout.php">Logout</a></li>';}?>
 </ul>
 
+<form name="SurveyIdEingabe" id="SurveyIdEingabe" action="test_auswertung.php" method="get">
+
+    <label for="SurveyIdEingabe">SurveyId</label>
+    <input name="textSurveyId" type="text" id="textSurveyId">
+
+    <input name="submit" type="submit" id="submit">
+
+</form>
 
 
 <?php include ("footer.html") ?>

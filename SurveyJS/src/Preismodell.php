@@ -11,6 +11,19 @@ class Preismodell
             $summen[$pricingModel] = $this->getSumForPricingModel($pricingModelFactors, $factors);
         }
         asort($summen);
+
+        $summenAsString = json_encode([
+            "summen" => $summen
+            ]);
+
+        $PDO = new PDO("sqlite:" . __DIR__ . "/../resources/sqlite.db");
+
+        $query = "UPDATE answers SET (`PricingModels`)=:PricingModels WHERE `survey_identifier`=:survey_identifier";
+        $statement = $PDO->prepare($query);
+        $statement->bindValue(":survey_identifier", $_SESSION["SurveyId"]);
+        $statement->bindValue(":PricingModels", $summenAsString);
+        $statement->execute();
+
         return $summen;
     }
 

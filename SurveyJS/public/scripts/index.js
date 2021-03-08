@@ -16,6 +16,8 @@ function surveyData() {
                     this.preismodell = json.preismodell;
                     this.factors = json.factors;
                     this.excluded = json.excluded;
+                    this.surveyIdentifier = json.surveyIdentifier;
+                    alert(this.surveyIdentifier);
                 })
         },
         init: function () {

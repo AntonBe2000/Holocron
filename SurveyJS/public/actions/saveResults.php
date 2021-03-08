@@ -16,13 +16,17 @@ foreach(QUESTIONS as $category => $questions) {
     }
 }
 
-$json = json_decode(trim(file_get_contents("php://input")), true);
+
 
 $surveyIdentifier = uniqid();
+$json = json_decode(trim(file_get_contents("php://input")), true);
 
 $results = $json["results"];
 
 $FactorObserver = new FactorObserver();
+
+session_start();
+$_SESSION["SurveyId"] = $surveyIdentifier;
 
 foreach($results as $key => $result) {
     $Answer = new Answer($surveyIdentifier, $key, $result, date("Y-m-d H:i:s"));
@@ -32,13 +36,11 @@ foreach($results as $key => $result) {
 
 $Preismodell = new Preismodell();
 
-session_start();
-$_SESSION["SurveyId"] = $surveyIdentifier;
-
 
 
 echo json_encode([
     "excluded" => $FactorObserver->getExcluded(),
     "preismodell" => $Preismodell->calculate($FactorObserver->getFactors(),$FactorObserver->getExcluded()),
-    "factors" => $FactorObserver->getFactors()
+    "factors" => $FactorObserver->getFactors(),
+    "SurveyId" =>$surveyIdentifier
 ]);

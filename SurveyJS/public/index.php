@@ -19,6 +19,7 @@
 <div x-data="surveyData()" x-init="init()">
     <div id="surveyElement"></div>
     <div id="surveyResultElement"></div>
+    </script>
     <script src="scripts/index.js"></script>
 
     <div id="surveyResult" x-show="Object.entries(preismodell).length > 0">
@@ -133,8 +134,8 @@
 <div>
     <p><a href="canvas.php">Hier gehts zum Canvas</a> </p>
 </div>
-
     </div>
+
     <?php include("feedback_modal.php"); ?>
 </div>
     <?php include("footer.html"); ?>
