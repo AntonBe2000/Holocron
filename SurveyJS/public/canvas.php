@@ -20,16 +20,17 @@ define("NAMES", [
     "markt_preismodell_alt" => "Häufigtes Preismodell am Markt:",
     //Nutzen
     "nutzen_prio_beduerfnisse" => "",
+    "nutzen_wie_erfolgt" => "Wie wird das Bedürfnis befriedigt?",
 
     //Kategorie Kundenrisiko
-    "kundensit_hoehe_risiko"=>"Geschäftsrisiko Kunde",
-    "kundensit_zusammenbrechen_service" =>"Geschäftskritischer Service",
+    "kundensit_hoehe_risiko" => "Geschäftsrisiko Kunde",
+    "kundensit_zusammenbrechen_service" => "Geschäftskritischer Service",
     "kundensit_kerngeschaeft_korreliert" => "Korrelation Service mit Kerngeschäft",
 
     //Kategorie Technik
-    "technik_erfassung_moeglich" =>"Tracking der Nutzung des Services möglich?",
-    "technik_welche_erfassung" =>"Wie?",
-    "technik_hohe_fixkosten" =>"Hohe Fixkosten?"
+    "technik_erfassung_moeglich" => "Tracking der Nutzung des Services möglich?",
+    "technik_welche_erfassung" => "Wie?",
+    "technik_hohe_fixkosten" => "Hohe Fixkosten?"
 ]);
 
 define("TYPES", [
@@ -39,7 +40,6 @@ define("TYPES", [
     "kundensit_zahlungsbereitschaft" => "hidden",
     "technik_welche_erfassung" => "multiple",
     "kundensit_hoehe_risiko" => "bar",
-    "nutzen_wie_erfolgt " => "hidden",
     "kundensit_budgetsituation" => "bar",
     "kundensit_planungssicherheit" => "bar",
     "kundensit_kerngeschaeft_korreliert" => "bar",
@@ -48,8 +48,8 @@ define("TYPES", [
     "markt_eigenrealisierung" => "bar",
     "technik_hohe_fixkosten " => "bar",
     "nutzen_wie_haeufig" => "hidden",
-    "nutzen_wie_haeufig " => "hidden",
     "kundensit_bisherig_geeignet " => "bar",
+    "kunden_welche_art" => "multiple"
 ]);
 
 function getAnswers($surveyIdentifier)
