@@ -150,6 +150,9 @@ function getCanvasContent(string $category, array $categories)
                 <td>
                     <?php include("contact_modal.php"); ?>
                 </td>
+                <td>
+                    <button class="button" onclick="CreatePDFfromHTML()">Download als PDF</button>
+                </td>
             </tr>
         </table>
 
