@@ -125,13 +125,6 @@
       ],
       "multiplier": 1,
       "avgValue": 5.25
-    },
-    "Modell_am_Markt": {
-      "values": [
-        0
-      ],
-      "multiplier": 1,
-      "avgValue": 0
     }
   }
 }

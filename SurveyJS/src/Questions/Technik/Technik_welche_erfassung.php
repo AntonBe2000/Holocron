@@ -5,20 +5,28 @@ class Technik_welche_erfassung extends Question
 {
     public function calculate($value, &$factors, &$excluded)
     {
-        switch ($value)
+        $comboboxValues = explode("#", $value);
+        $numberElements = count($comboboxValues);
+        $calculatedValue = 0;
+        for ($i=0; $i < $numberElements; $i++)
         {
-            case "Pro Nutzung":
-                $factors["Nutzungserfassung"]["values"][] = 10;
-                break;
-            case "Datenvolumen":
-                $factors["Nutzungserfassung"]["values"][] = 7;
-                break;
-            case "Nutzungsdauer":
-                $factors["Nutzungserfassung"]["values"][] = 5;
-                break;
-            case "Pro Nutzer":
-                $factors["Nutzungserfassung"]["values"][] = 0;
-                break;
+            switch ($comboboxValues[$i])
+            {
+                case "Pro Nutzung":
+                    $calculatedValue += 10;
+                    break;
+                case "Datenvolumen":
+                    $calculatedValue += 7;
+                    break;
+                case "Nutzungsdauer":
+                    $calculatedValue += 5;
+                    break;
+                case "Pro Nutzer":
+                    $calculatedValue += 0;
+                    break;
+            }
         }
+        $calculatedValue = round ($calculatedValue / $numberElements);
+        $factors["Nutzungserfassung"]["values"][] = $calculatedValue;
     }
 }

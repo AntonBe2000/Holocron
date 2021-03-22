@@ -5,23 +5,32 @@ class Nutzen_wie_erfolgt extends Question
 {
     public function calculate($value, &$factors, &$excluded)
     {
-        switch ($value)
+        $comboboxValues = explode("#", $value);
+        $numberElements = count($comboboxValues);
+        $calculatedValue = 0;
+        for ($i=0; $i < $numberElements; $i++)
         {
-            case "1":
-                $factors["Bedürfnishäufigkeit"]["values"][] = 1;
-                break;
-            case "2":
-                $factors["Bedürfnishäufigkeit"]["values"][] = 3;
-                break;
-            case "3":
-                $factors["Bedürfnishäufigkeit"]["values"][] = 5;
-                break;
-            case "4":
-                $factors["Bedürfnishäufigkeit"]["values"][] = 8;
-                break;
-            case "5":
-                $factors["Bedürfnishäufigkeit"]["values"][] = 10;
-                break;
+            switch ($comboboxValues[$i])
+            {
+                case "1":
+                    $calculatedValue += 1;
+                    break;
+                case "2":
+                    $calculatedValue += 3;
+                    break;
+                case "3":
+                    $calculatedValue += 5;
+                    break;
+                case "4":
+                    $calculatedValue += 8;
+                    break;
+                case "5":
+                    $calculatedValue += 10;
+                    break;
+            }
         }
+        $calculatedValue = round ($calculatedValue / $numberElements);
+        $factors["Bedürfnishäufigkeit"]["values"][] = $calculatedValue;
+
     }
 }

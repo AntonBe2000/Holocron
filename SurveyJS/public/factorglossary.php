@@ -119,13 +119,6 @@
             Preismodelle bereits aus.
         </dd>
 
-        <dt>Modell_am_Markt</dt>
-        <dd>Modell am Markt beschreibt, ob ein Preismodell bereits am Markt häufig angeboten wird. Beispiel: Wenn
-            bereits ein Preismodell Standard am Markt ist, ist Modell am Markt hoch, dann ist es wahrscheinlicher, damit
-            auch die Erwartungshaltung des Kunden zu treffen.
-            Beispiel eines am Markt etablierten Preismodells: SAP und Preis pro Benutzer. Beispiel für ein eher
-            ungewöhnliches Preismodell: Flatrate - bei der Bahn noch nicht verbreitet.
-        </dd>
     </dl>
 
     <?php include("footer.html"); ?>
