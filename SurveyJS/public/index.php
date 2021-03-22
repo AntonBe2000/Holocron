@@ -134,6 +134,7 @@
             <p><a href="canvas.php" target="_blank">Hier gehts zum Canvas</a></p>
         </div>
 
+        
     </div>
     <?php include("feedback_modal.php"); ?>
 </div>
